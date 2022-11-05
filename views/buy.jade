@@ -1,0 +1,35 @@
+title Buy 
+
+body 
+    .container 
+        include shopnav 
+
+    case toBuy
+        when '1'
+            - var name='無限手套'
+            - var img='jpknife.jpg'
+            - var price=9999999
+        when '2'
+            - var name='雷神之錘'
+            - var img='mask.jpg'
+            - var price=5555555
+        when '3'
+            - var name='方舟反應爐'
+            - var img='reborn.jpg'
+            - var price=1111111
+        default 
+            - var name=''
+            - var img=''
+            - var price=999999999999999
+    .container
+        .card.p-3.p-4 
+            .text-center
+                p #{name}
+                img(src="/images/#{img}")
+            .text-center.mt-3 
+                .buttons 
+                    button.btn.btn-outline-primary.px-4 
+                        a(href="/shop/buy/#{name}/cash" style="text-decoration: none") Buy
+
+link(rel="stylesheet", href="/stylesheets/shopStyle.css")
+link(rel="stylesheet", href="/stylesheets/bootstrap.css")

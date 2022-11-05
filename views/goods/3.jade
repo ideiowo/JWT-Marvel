@@ -1,0 +1,16 @@
+.col.mb-5
+    .card.h-100
+        img.card-img-top(src='./images/reborn.jpg', alt='...')
+        .card-body.p-4
+            .text-center
+                // Product name
+                h5.fw-bolder 方舟反應爐
+                // Product price
+                | ₿ 1111111
+            // Product actions
+            .card-footer.p-4.pt-0.border-top-0.bg-transparent
+                .text-center
+                    if toShow == '登入'
+                        a.btn.btn-outline-dark.mt-auto(href='/api/auth/login') More Info
+                    else 
+                        a.btn.btn-outline-dark.mt-auto(href='/shop/buy/3') More Info
